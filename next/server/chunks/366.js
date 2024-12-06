@@ -1,0 +1,16 @@
+"use strict";exports.id=366,exports.ids=[366],exports.modules={4405:(e,s,l)=>{l.r(s),l.d(s,{default:()=>h});var i=l(997),a=l(6689),r=l(9114),t=l(1664),d=l.n(t),n=l(8096),c=l.n(n);l(8278),l(1598);let o=(0,r.gql)`
+  query GetBlogPosts {
+    posts(first: 5) {
+      nodes {
+        id
+        title
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`,h=function(){let{loading:e,error:s,data:l}=(0,r.useQuery)(o),[t,n]=(0,a.useState)(!1);if(e)return i.jsx("p",{children:"Loading..."});if(s)return(0,i.jsxs)("p",{children:["Error: ",s.message]});let h=()=>{n(!0)};return(0,i.jsxs)("div",{id:"blog",className:"container",style:{height:"90%"},children:[i.jsx("div",{className:"row header-text text-center blog-header",children:i.jsx("div",{className:"col-lg-12",children:(0,i.jsxs)("h3",{children:["BL",i.jsx("span",{children:"O"}),"G"]})})}),(0,i.jsxs)("div",{className:"row blog-pa blog-list",style:{display:"flex",flexDirection:"row"},children:[i.jsx("div",{className:"col-lg-8 blog-list-slick h-auto",children:i.jsx(c(),{dots:!0,infinite:!0,speed:500,autoplay:!0,autoplaySpeed:5e3,slidesToShow:2,slidesToScroll:1,initialSlide:0,responsive:[{breakpoint:1024,settings:{slidesToShow:3,slidesToScroll:3,infinite:!0,dots:!0}},{breakpoint:600,settings:{slidesToShow:2,slidesToScroll:2,initialSlide:2}},{breakpoint:480,settings:{slidesToShow:1,slidesToScroll:1}}],className:"blog-main",children:l?.posts.nodes.map(e=>i.jsxs("div",{className:"w-full md:w-1/2 lg:w-1/2 xl:w-1/2 px-4 mb-8",style:{height:"100%"},children:[i.jsx("div",{style:{height:"200px"},children:i.jsx("div",{className:`image-container ${t?"image-loaded":"image-loading"}`,children:i.jsx("img",{src:e.featuredImage?.node?.sourceUrl,alt:"blog-img",className:"img-fluid w-100",style:{height:"100%"},onLoad:h})})}),i.jsxs("div",{style:{height:"50%"},className:"blog-item-txt",children:[i.jsx("h3",{children:e.title}),i.jsx("p",{className:"excerpt",dangerouslySetInnerHTML:{__html:e.excerpt}}),i.jsx(d(),{href:`/blog/${e.id}`,children:"Read More"})]})]},e.id))})}),(0,i.jsxs)("div",{className:"col-lg-4 col-md-10 m-md-auto blog-text",children:[i.jsx("form",{children:(0,i.jsxs)("div",{className:"input-group contact-input mb-3",children:[i.jsx("input",{type:"text",className:"form-control box-bg",placeholder:"Search here...","aria-label":"Search"}),i.jsx("button",{type:"submit",className:"search-btn",children:i.jsx("i",{className:"fa fa-search","aria-hidden":"true"})})]})}),(0,i.jsxs)("div",{className:"tags",children:[i.jsx("h4",{children:"Hash Tags"}),i.jsx("a",{href:"#",children:"Marketing"}),i.jsx("a",{href:"#",children:"Branding"}),i.jsx("a",{href:"#",children:"Success"}),(0,i.jsxs)("div",{className:"tag-pa",children:[i.jsx("a",{href:"#",children:"Strategy"}),i.jsx("a",{href:"#",children:"Digital"}),i.jsx("a",{href:"#",children:"Growth"})]}),(0,i.jsxs)("div",{className:"tag-pa",children:[i.jsx("a",{href:"#",children:"Creative"}),i.jsx("a",{href:"#",children:"Innovation"})]})]})]})]})]})}}};
